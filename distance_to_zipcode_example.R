@@ -22,8 +22,8 @@ if (!exists("ZIPS")) {
   ZIPS = ZIPS.spdf@data # keep just the data and throw away the shapes
 
   # Make the lat/long a numeric value
-  ZIPS$lon = as.numeric(ZIPS$INTPTLON10)
-  ZIPS$lat = as.numeric(ZIPS$INTPTLAT10)
+  ZIPS$lon = as.numeric(as.character(ZIPS$INTPTLON10))
+  ZIPS$lat = as.numeric(as.character(ZIPS$INTPTLAT10))
   
   save("ZIPS", file=ZIPS.file)
 }
